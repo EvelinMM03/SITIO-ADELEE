@@ -28,7 +28,7 @@
     </header>
 
     <nav class="buttons-container">
-        <button onclick="scrollToSection('biografia')">Biografía</button>
+        <button onclick="scrollToSection('bio-container')">Biografía</button>
         <button onclick="scrollToSection('albums')">Álbumes</button>
         <button onclick="scrollToSection('gallery')">Galería</button>
         <button onclick="scrollToSection('videos')">Videos</button>
@@ -66,15 +66,15 @@
         <div id="song-lyrics"></div>
     </section>
 
-    <section id="biografia">
-        <div class="bio-container">
-            <h2 class="bio-title">Biografía</h2>
-            <p>
-                Adele Laurie Blue Adkins (Tottenham, Londres, 5 de mayo de 1988), conocida simplemente como Adele, es una cantautora y multinstrumentista británica. Es una de las artistas musicales con mayores ventas del mundo, con más de 120 millones de ventas entre discos y sencillos. Desde pequeña mostró interés por la música y en 2006 se egresó de la BRIT School, año en el que firmó un contrato con XL Recordings, tras ser descubierta por unos demos que un amigo publicó en la red social MySpace. En 2008, lanzó su álbum de estudio debut, 19, el cual se situó en la posición 1 de la lista de álbumes británica y ha sido certificado ocho veces platino en Reino Unido y triple platino en Estados Unidos. En los Premios Brit de 2008 recibió el galardón ‹elección de los críticos› y también ganó la encuesta Sound of 2008 realizada por la BBC. Un año después, en la 51.ª entrega de los Premios Grammy ganó los galardones mejor artista nuevo y mejor interpretación vocal pop femenina por «Chasing Pavements». Es según la revista Rolling Stone la cantante más grande del siglo XXI y la número 22 de toda la historia. A principios de 2011, lanzó su segundo álbum de estudio, 21, y fue éxito comercial en todo el mundo llegando a vender más de treinta millones de copias. Por sus ventas ha sido certificado dieciocho veces platino en Reino Unido y en Estados Unidos obtuvo la certificación de diamante. El álbum también contó con críticas favorables y recibió numerosos premios a lo largo de 2011 y 2012, entre ellos incluye el récord de seis grammys ganados en una sola ceremonia. Adele es la primera mujer en la historia que sitúa tres sencillos («Rolling in the Deep», «Someone Like You» y «Set Fire to the Rain») entre las primeras diez posiciones de la lista musical Billboard Hot 100 simultáneamente, y la primera artista femenina en tener dos álbumes y dos sencillos entre los primeros cinco puestos de la lista Billboard 200 y Billboard Hot 100 al mismo tiempo. Debido al éxito de 21, cuenta con varias menciones en el Guinness World Records.
-            
-            </p>
-        </div>
-    </section>
+    <div id="bio-container" class="bio-container">
+        <h2 class="bio-title">Biografía</h2>
+        <p id="bio-text" class="bio-text">
+            Adele Laurie Blue Adkins (Tottenham, Londres, 5 de mayo de 1988), conocida simplemente como Adele, es una cantautora y multinstrumentista británica. Es una de las artistas musicales con mayores ventas del mundo, con más de 120 millones de ventas entre discos y sencillos. Desde pequeña mostró interés por la música y en 2006 se egresó de la BRIT School, año en el que firmó un contrato con XL Recordings, tras ser descubierta por unos demos que un amigo publicó en la red social MySpace.
+            <span id="more-text" class="more-text">En 2008, lanzó su álbum de estudio debut, 19, el cual se situó en la posición 1 de la lista de álbumes británica y ha sido certificado ocho veces platino en Reino Unido y triple platino en Estados Unidos. En los Premios Brit de 2008 recibió el galardón ‹elección de los críticos› y también ganó la encuesta Sound of 2008 realizada por la BBC. Un año después, en la 51.ª entrega de los Premios Grammy ganó los galardones mejor artista nuevo y mejor interpretación vocal pop femenina por «Chasing Pavements». Es según la revista Rolling Stone la cantante más grande del siglo XXI y la número 22 de toda la historia. A principios de 2011, lanzó su segundo álbum de estudio, 21, y fue éxito comercial en todo el mundo llegando a vender más de treinta millones de copias. Por sus ventas ha sido certificado dieciocho veces platino en Reino Unido y en Estados Unidos obtuvo la certificación de diamante. El álbum también contó con críticas favorables y recibió numerosos premios a lo largo de 2011 y 2012, entre ellos incluye el récord de seis grammys ganados en una sola ceremonia. Adele es la primera mujer en la historia que sitúa tres sencillos («Rolling in the Deep», «Someone Like You» y «Set Fire to the Rain») entre las primeras diez posiciones de la lista musical Billboard Hot 100 simultáneamente, y la primera artista femenina en tener dos álbumes y dos sencillos entre los primeros cinco puestos de la lista Billboard 200 y Billboard Hot 100 al mismo tiempo. Debido al éxito de 21, cuenta con varias menciones en el Guinness World Records.</span>
+        </p>
+        <button id="toggle-button" class="toggle-button">Ver más</button>
+    </div>
+    
 
     <section id="gallery" class="gallery">
         <h2>Galería</h2>
