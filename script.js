@@ -84,24 +84,20 @@ function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
 
-// Función para abrir el modal del video
-function openVideoModal(videoSrc) {
-    const modal = document.getElementById("video-modal");
-    const modalVideo = document.getElementById("modal-video");
-    const modalVideoSource = document.getElementById("modal-video-source");
+document.getElementById("toggle-button").addEventListener("click", function() {
+    const bioText = document.getElementById("bio-text");
+    const moreText = document.getElementById("more-text");
 
-    modal.style.display = "block";
-    modalVideoSource.src = videoSrc;
-    modalVideo.load();  // Carga el video para que se pueda reproducir
-    modalVideo.play();  // Reproduce el video automáticamente
-}
-
-// Función para cerrar el modal del video
-function closeVideoModal() {
-    const modal = document.getElementById("video-modal");
-    const modalVideo = document.getElementById("modal-video");
-
-    modal.style.display = "none";
-    modalVideo.pause();  // Pausa el video cuando se cierra el modal
-}
+    if (bioText.classList.contains("expanded")) {
+        // Si el texto está expandido, lo colapsamos
+        bioText.classList.remove("expanded");
+        moreText.classList.remove("expanded");
+        this.textContent = "Ver más"; // Cambiar el texto del botón
+    } else {
+        // Si el texto está colapsado, lo expandimos
+        bioText.classList.add("expanded");
+        moreText.classList.add("expanded");
+        this.textContent = "Ver menos"; // Cambiar el texto del botón
+    }
+});
 
