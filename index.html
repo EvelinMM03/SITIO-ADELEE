@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adele - Página de Fans</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para la letra de la canción */
+        #song-lyrics {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 100%;
+            white-space: pre-wrap; /* Para que los saltos de línea se respeten */
+            word-wrap: break-word; /* Para que el texto largo se divida correctamente */
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header id="hero" class="hero">
+        <img src="adelePortada.jpg" alt="Adele en concierto">
+        <h1 class="artist-name">ADELE</h1>
+    </header>
+
+    <nav class="buttons-container">
+        <button onclick="scrollToSection('biografia')">Biografía</button>
+        <button onclick="scrollToSection('albums')">Álbumes</button>
+        <button onclick="scrollToSection('gallery')">Galería</button>
+        <button onclick="scrollToSection('videos')">Videos</button>
+    </nav>
+
+    <section id="albums" class="albums">
+        <h2>Álbumes</h2>
+        <div class="album-container">
+            <div class="album" onclick="showAlbum('album1')">
+                <img src="Adele19.jpeg" alt="Adele 19">
+                <p>ADELE 19</p>
+            </div>
+            <div class="album" onclick="showAlbum('album2')">
+                <img src="adele21.jfif" alt="Adele 21">
+                <p>ADELE 21</p>
+            </div>
+            <div class="album" onclick="showAlbum('album3')">
+                <img src="adele25.jpg" alt="Adele 25">
+                <p>ADELE 25</p>
+            </div>
+            <div class="album" onclick="showAlbum('album4')">
+                <img src="adele30.jpeg" alt="Adele 30">
+                <p>ADELE 30</p>
+            </div>
+        </div>
+        <div id="album-details"></div>
+    </section>
+
+    <section id="music" class="music hidden">
+        <h2>Música</h2>
+        <audio id="player" controls>
+            <source id="audio-source" type="audio/mp3">
+        </audio>
+        <div id="song-title"></div>
+        <div id="song-lyrics"></div>
+    </section>
+
+    <section id="biografia">
+        <div class="bio-container">
+            <h2 class="bio-title">Biografía</h2>
+            <p>
+                Adele Laurie Blue Adkins (Tottenham, Londres, 5 de mayo de 1988), conocida simplemente como Adele, es una cantautora y multinstrumentista británica. Es una de las artistas musicales con mayores ventas del mundo, con más de 120 millones de ventas entre discos y sencillos. Desde pequeña mostró interés por la música y en 2006 se egresó de la BRIT School, año en el que firmó un contrato con XL Recordings, tras ser descubierta por unos demos que un amigo publicó en la red social MySpace. En 2008, lanzó su álbum de estudio debut, 19, el cual se situó en la posición 1 de la lista de álbumes británica y ha sido certificado ocho veces platino en Reino Unido y triple platino en Estados Unidos. En los Premios Brit de 2008 recibió el galardón ‹elección de los críticos› y también ganó la encuesta Sound of 2008 realizada por la BBC. Un año después, en la 51.ª entrega de los Premios Grammy ganó los galardones mejor artista nuevo y mejor interpretación vocal pop femenina por «Chasing Pavements». Es según la revista Rolling Stone la cantante más grande del siglo XXI y la número 22 de toda la historia. A principios de 2011, lanzó su segundo álbum de estudio, 21, y fue éxito comercial en todo el mundo llegando a vender más de treinta millones de copias. Por sus ventas ha sido certificado dieciocho veces platino en Reino Unido y en Estados Unidos obtuvo la certificación de diamante. El álbum también contó con críticas favorables y recibió numerosos premios a lo largo de 2011 y 2012, entre ellos incluye el récord de seis grammys ganados en una sola ceremonia. Adele es la primera mujer en la historia que sitúa tres sencillos («Rolling in the Deep», «Someone Like You» y «Set Fire to the Rain») entre las primeras diez posiciones de la lista musical Billboard Hot 100 simultáneamente, y la primera artista femenina en tener dos álbumes y dos sencillos entre los primeros cinco puestos de la lista Billboard 200 y Billboard Hot 100 al mismo tiempo. Debido al éxito de 21, cuenta con varias menciones en el Guinness World Records.
+            
+            </p>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Galería</h2>
+        <div class="gallery-container">
+            <img src="ADELE1.jpg" alt="Adele en evento" onclick="openModal(this.src)">
+            <img src="adeleede.jpg" alt="Adele en concierto" onclick="openModal(this.src)">
+            <img src="adelefotito.webp" alt="Adele con Grammy" onclick="openModal(this.src)">
+            <img src="adelegrami.jpg" alt="Adele con Grammy" onclick="openModal(this.src)">
+        </div>
+    </section>
+
+    <section id="videos" class="videos">
+        <h2>Videos</h2>
+        <div class="video-container">
+            <div class="video" onclick="openVideoModal('videos/video1.mp4')">
+                <video width="300" controls>
+                    <source src="videos/73_ Questions With Adele _ Vogue.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+                <p>73 PREGUNTAS CON ADELE</p>
+            </div>
+            <div class="video" onclick="openVideoModal('videos/video2.mp4')">
+                <video width="300" controls>
+                    <source src="videos/Adele Reveals The Stories Behind Her Hit Lyrics & Deep Dives Into Her Life _ Life In Lyrics _ ELLE.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+                <p>VIDA EN LETRAS</p>
+            </div>
+            <div class="video" onclick="openVideoModal('videos/video3.mp4')">
+                <video width="300" controls>
+                    <source src="videos/Playlist.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+                <p>PLAYLIST</p>
+            </div>
+            
+        </div>
+    </section> 
+
+    <section id="contacto" class="contacto">
+        <h2>Contacta con Nosotros</h2>
+        <div class="contacto-container">
+            <!-- Redes Sociales -->
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/share/1H17aNTXeB/" target="_blank" class="social-icon">
+                    <img src="logos/facebook.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/evelyn_mm2415?igsh=MWNnMzg5dno2c2s4bw==" target="_blank" class="social-icon">
+                    <img src="logos/instagram.png" alt="Instagram" />
+                </a>
+            </div>
+    
+            <!-- Número de Teléfono -->
+            <div class="telefono">
+                <p><strong>Teléfono:</strong> +52 2871519546</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Contenido de la página -->
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="author">Creado por: <strong><a href="https://evelinmm03.github.io/curriculumfrontend/" target="_blank">EVELIN MONTALVO MARTINEZ</a></strong></p>
+            <p class="fecha">Fecha de realización: <strong>Marzo 2025</strong></p>
+        </div>
+    </footer>   
+
+    <div id="modal" class="modal hidden" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="modal-image" class="modal-content">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Página de Fans de Adele. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
